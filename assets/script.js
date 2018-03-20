@@ -1,14 +1,14 @@
 
 $( document ).ready(function(){ 
-    var sample = document.getElementById("foobar");
-    sample.play();
-    
-var Random=Math.floor(Math.random()*102+19)
+  var sample = document.getElementById("foobar");
+  sample.play()
+  
+var Random=Math.floor(Math.random()*108+21)
 
-$('#jimmyTake').text(Random); 
+$('#scoreToMatch').text(Random); 
 
 var num1= Math.floor(Math.random()*12+1)
-var num2= Math.floor(Math.random()*12+1)
+var num2= Math.floor(Math.random()*14+2)
 var num3= Math.floor(Math.random()*12+1)
 var num4= Math.floor(Math.random()*12+1)
 
@@ -20,16 +20,16 @@ var losses = 0;
 $('#wins').text(wins); 
 $('#losses').text(losses);
 
-function reset() {
-    Random=Math.floor(Math.random()*102+19);
+function reset(){
+    Random=Math.floor(Math.random()*108+21);
     console.log(Random)
-    $('jimmyTake').text(Random); 
+    $('#scoreToMatch').text(Random); 
     num1= Math.floor(Math.random()*12+1);
     num2= Math.floor(Math.random()*12+1);
     num3= Math.floor(Math.random()*12+1);
-    num3= Math.floor(Math.random()*12+1);
+    num4= Math.floor(Math.random()*12+1);
     playerTotal = 0;
-    $('#totalCash').text(playerTotal);
+    $('#totalScore').text(playerTotal);
 }
 
 function winner(){ 
@@ -43,14 +43,14 @@ function loser(){
 alert ("You're gonna be sleeping with the fishes, my friend.");
 losses++;
 $('#losses').text(losses);
-reset()   
+reset();   
 }
 
 
 $('.ace').on ('click', function(){
     playerTotal = playerTotal + num1;
     console.log("New playerTotal= " + playerTotal);
-    $('#totalCash').text(playerTotal); 
+    $('#totalScore').text(playerTotal); 
           //Win & lose conditions
         if (playerTotal == Random){
           winner();
@@ -66,7 +66,7 @@ $('.ace').on ('click', function(){
 $('.king').on ('click', function(){
     playerTotal = playerTotal + num2;
     console.log("New playerTotal= " + playerTotal);
-    $('#totalCash').text(playerTotal); 
+    $('#totalScore').text(playerTotal); 
         if (playerTotal == Random){
           winner();
         }
@@ -79,7 +79,7 @@ $('.king').on ('click', function(){
   $('.queen').on ('click', function(){
     playerTotal = playerTotal + num3;
     console.log("New playerTotal= " + playerTotal);
-    $('#totalCash').text(playerTotal);
+    $('#totalScore').text(playerTotal);
 
           if (playerTotal == Random){
           winner();
@@ -92,7 +92,7 @@ $('.king').on ('click', function(){
   $('.jack').on ('click', function(){
     playerTotal = playerTotal + num4;
     console.log("New playerTotal= " + playerTotal);
-    $('#totalCash').text(playerTotal); 
+    $('#totalScore').text(playerTotal); 
       
           if (playerTotal == Random){
           winner();
