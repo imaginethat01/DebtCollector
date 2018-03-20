@@ -4,7 +4,7 @@ position: relative;
 left: 2%;
 flex-wrap: wrap;
 background-color: rgb(146, 13, 3);
-border-width: 50px;
+border-width: 25px;
 padding: 25px;
 border-radius: 15px;
 max-width: 625px; }
@@ -15,7 +15,7 @@ position: relative;
 left: 10%;
 flex-wrap: wrap;
 background-color: rgb(146, 13, 3);
-border-width: 50px;
+border-width: 25px;
 padding: 25px;
 border-radius: 15px;
 max-width: 300px; }
